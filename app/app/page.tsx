@@ -51,13 +51,20 @@ type Creator = {
   verified?: boolean;
 };
 
-const PRICE_FILTERS = [
+type PriceFilter = {
+  value: string;
+  label: string;
+  min?: number;
+  max?: number;
+};
+
+const PRICE_FILTERS: PriceFilter[] = [
   { value: "any", label: "Any price" },
   { value: "under-250", label: "Under $250", max: 250 },
   { value: "250-500", label: "$250 - $500", min: 250, max: 500 },
   { value: "500-1000", label: "$500 - $1k", min: 500, max: 1000 },
   { value: "1000-plus", label: "$1k+", min: 1000 },
-] as const;
+];
 
 const DEFAULT_CONTENT_TYPES = [
   "Short-form video",
