@@ -1,0 +1,4 @@
+interface:
+  display_name: "Convex DB Best Practices"
+  short_description: "Best practices for Convex queries and indexes."
+  default_prompt: "Use $convex-db-best-practices to review Convex DB code and recommend fixes."
